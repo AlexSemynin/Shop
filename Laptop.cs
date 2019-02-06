@@ -14,5 +14,13 @@ namespace _4_4_2_Polimorfizm
         {
             Material = material;
         }
+        public override void DispInfoProduct()
+        {
+            Console.WriteLine("Ноутбук:");
+            Console.WriteLine("Название: " + Name);
+            Console.WriteLine($"Цена: {Price}");
+            Console.WriteLine("Производитель: " + Manufacturer);
+            Console.WriteLine($"Наличие кнопок: {Material}");
+        }
     }
 }

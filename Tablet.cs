@@ -15,5 +15,13 @@ namespace _4_4_2_Polimorfizm
         {
             Size = size;
         }
+        public override void DispInfoProduct()
+        {
+            Console.WriteLine("Планшет:");
+            Console.WriteLine("Название: " + Name);
+            Console.WriteLine($"Цена: {Price}");
+            Console.WriteLine("Производитель: " + Manufacturer);
+            Console.WriteLine($"Наличие кнопок: {Size}");
+        }
     }
 }
