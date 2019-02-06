@@ -16,5 +16,14 @@ namespace _4_4_2_Polimorfizm
         {
             HaveButtons = haveButtons;
         }
+        //переопределенный метод
+        public override void DispInfoProduct()
+        {
+            Console.WriteLine("Телефон:");
+            Console.WriteLine("Название: " + Name);
+            Console.WriteLine($"Цена: {Price}");
+            Console.WriteLine("Производитель: " + Manufacturer);
+            Console.WriteLine($"Наличие кнопок: {HaveButtons}");
+        }
     }
 }
