@@ -26,6 +26,15 @@ namespace _4_4_2_Polimorfizm
             }
             return 0.8 * Price;
         }
+
+        public void DispInfoProduct()
+        {
+            Console.WriteLine("Тип товара");
+            Console.WriteLine("Название: " + Name);
+            Console.WriteLine($"Цена: {Price}");
+            Console.WriteLine("Производитель: " + Manufacturer);
+        }
+
         //Конструктор
         public Product(string name, double price, string manufacture)
         {
