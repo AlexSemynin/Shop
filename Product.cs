@@ -27,7 +27,7 @@ namespace _4_4_2_Polimorfizm
             return 0.8 * Price;
         }
 
-        public void DispInfoProduct()
+        public virtual void DispInfoProduct()
         {
             Console.WriteLine("Тип товара");
             Console.WriteLine("Название: " + Name);
