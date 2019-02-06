@@ -25,16 +25,53 @@ namespace _4_4_2_Polimorfizm
                 tablet1,
                 laptop1
             };
-            
-        }
-        public void Assortiment(Product[] products)
-        {
-            Console.WriteLine("Список товаров:");
-            for(int i = 0; i < products.Length; i++)
+
+            //Велосипедим интерфейс поккупки(мб это можно реализовать через метод)
+            while (true)
             {
-                products[i].DispInfoProduct();
-                Console.WriteLine("_________________");
-            } 
+                Console.Write("\n\nИнтерфейс покупки:");
+                Console.WriteLine($"Привет, {user1.Name}, your balance: {user1.Balance}");
+                //Assortiment(products);
+                Console.WriteLine("Список товаров:");
+                for (int i = 0; i < products.Length; i++)
+                {
+                    Console.WriteLine($"Порядковый номер: {i}");
+                    products[i].DispInfoProduct();
+                    Console.WriteLine("_________________");
+                }
+
+                //Выбор пользователя
+                Informer informer = new Informer();
+                Console.WriteLine("Выберите товар");
+                int productNunber = Convert.ToInt32(Console.ReadLine());
+                if(productNunber >= 0 && productNunber < products.Length)
+                {
+                    if(products[productNunber].Price <= user1.Balance)
+                    {
+                        informer.Buy(user1, products[productNunber]);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Пополните казну, милор");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Таких товаров нет");
+                }
+            }
+
+
         }
+        //public void Assortiment(Product[] products)
+        //{
+          //  Console.WriteLine("Список товаров:");
+            //for(int i = 0; i < products.Length; i++)
+            //{
+              //  Console.WriteLine($"Порядковый номер: {i}");
+                //products[i].DispInfoProduct();
+                //Console.WriteLine("_________________");
+            //} 
+        //}
     }
 }
